@@ -1,0 +1,14 @@
+[Unit]
+Description=Vearch daemon
+
+[Service]
+ExecStart=/etc/vearch/start.sh
+ExecReload=/bin/kill -HUP $MAINPID
+#ExecStop=/etc/vearch/stop.sh
+Type=simple
+KillMode=process
+Restart=on-failure
+RestartSec=30s
+
+[Install]
+WantedBy=multi-user.target
