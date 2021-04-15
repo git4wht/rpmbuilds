@@ -4,6 +4,7 @@
 ```
 yum install -y epel-release
 yum install -y rpm-build
+curl -fsSL https://get.docker.com | sh
 ```
 
 ## build Vearch
