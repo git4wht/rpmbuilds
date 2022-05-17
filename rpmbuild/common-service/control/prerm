@@ -1,0 +1,11 @@
+#!/bin/sh
+set -e
+
+if command -v systemctl &> /dev/null; then
+  systemctl disable --now apps@*
+  systemctl daemon-reload
+elif command -v service &> /dev/null; then
+  service apps@* stop
+  chkconfig apps@* off
+  chkconfig --del apps@*
+fi
