@@ -78,6 +78,18 @@
                                             </when>
                                             <readme>true</readme>
                                         </rule>
+                                        <rule>
+                                            <when>
+                                                <prefix>/opt/apps/template/bin/</prefix>
+                                            </when>
+                                            <mode>0755</mode>
+                                        </rule>
+                                        <rule>
+                                            <when>
+                                                <prefix>/opt/apps/template/lib/</prefix>
+                                            </when>
+                                            <mode>0755</mode>
+                                        </rule>
                                     </rules>
                                 </ruleset>
                             </rulesets>
